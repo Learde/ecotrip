@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru" class="lg:text-[10px] lg2:text-[8px] sm:text-[11px]">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Экотрип | Каньонинг</title>
+    <link rel="shortcut icon" href="../src/assets/images/logo.svg" type="image/svg" />
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="overflow-x-hidden bg-gray-bgc">
+    <header class="bg-center can-bg bg-cover pt-18 pb-106">
+        <div class="container relative mx-auto">
+            <nav class="flex flex-row items-start mb-48">
+                <a href="../" class="flex flex-row">
+                    <img src="/src/assets/images/logo.svg" class="sm:w-[2.7rem] w-[2.5rem] h-auto self-end mb-1"
+                        alt="Экскурсии и походы в Сочи. Ecomap" />
+                    <span class="uppercase font-bold text-[0.65rem] ml-4 leading-relaxed">
+                        <span class="text-lg"> Экотрип </span>
+                        <br />
+                        Походы Сочи
+                    </span>
+                </a>
+                <a href="../pvd/" class="sm:hidden ml-auto uppercase font-bold text-lg pt-1">
+                    Походы
+                </a>
+                <a href="./" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Каньонинг
+                </a>
+                <a href="../speleo/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Спелеотуризм
+                </a>
+                <a href="../blog/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Блог
+                </a>
+                <a href="../faq/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Вопросы
+                </a>
+
+                <input id="toggle" type="checkbox" class="hidden" />
+
+                <label for="toggle" class="sm:block hidden hamburger">
+                    <div class="top-bun"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bun"></div>
+                </label>
+
+                <div class="sm:flex nav hidden flex-col gap-y-4 pr-16 justify-center text-right">
+                    <a href="../" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Главная
+                    </a>
+                    <a href="../pvd/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Походы
+                    </a>
+                    <a href="./" class="uppercase font-bold text-2.25xl leading-7 py-4 text-primary-green">
+                        Каньонинг
+                    </a>
+                    <a href="../speleo/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Спелеотуризм
+                    </a>
+                    <a href="../blog/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Блог
+                    </a>
+                    <a href="../faq/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Вопросы
+                    </a>
+                    <div class="text-2.25xl leading-7 font-bold absolute bottom-[2rem] right-[4rem]">
+                        <a class="mb-9 block" href="tel:879996550090">+7 999 655 00 90</a>
+                        <div class="flex flex-row justify-end">
+                            <a class="block mr-8" href="https://vk.com/ecotripsochi" target="_blank">
+                                <img class="w-12 h-12 relative top-2" src="/src/assets/images/vk.svg"
+                                    alt="Ecotrip Вконтакте">
+                            </a>
+                            <a href="https://t.me/ecotripsochi" target="_blank">
+                                <img class="w-10 h-10" src="/src/assets/images/tg.svg" alt="Ecotrip Телеграм">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <h1
+                class="extra:text-3.5xl sm:text-4xl sm:mb-16 sm:leading-relaxed font-bold text-5xl tracking-wider uppercase leading-tight mb-8">
+                Каньонинг в горных реках <br class="sm:hidden" />
+                <span class="sm:hidden">&mdash;</span> в Сочи и Адлере
+            </h1>
+            <p class="extra:text-lg sm:text-xl sm:mb-14 font-bold text-2xl mb-20 tracking-[1.2px]">
+                Приключения по лучшим каньонам Большого Сочи
+            </p>
+
+            <button
+                class="uppercase py-5.5 px-15 tracking-wider font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                Подобрать поход
+            </button>
+
+            <div
+                class="sm:hidden flex flex-row items-center uppercase font-bold text-base absolute right-12 top-1/2 rotate-90 origin-top-right translate-y-86">
+                Подпишись
+                <div class="w-48 h-[1px] bg-white mx-5"></div>
+                <a href="https://t.me/ecotripsochi" target="_blank">
+                    <img src="/src/assets/images/tg.svg" class="w-4 h-auto mr-5 -rotate-90" />
+                </a>
+                <a href="https://vk.com/ecotripsochi" target="_blank">
+                    <img src="/src/assets/images/vk.svg" class="w-4 h-auto -rotate-90" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="sm:mb-24 container mb-60">
+        <div class="sm:flex-col relative bottom-8 flex flex-row">
+            <div class="sm:mr-0 grow-0 mr-20">
+                <div class="sm:w-full sm:h-165 rounded-md w-145 h-200 can-1 box-shadow bg-center bg-cover">
+                </div>
+                <div
+                    class="sm:justify-start sm:mt-arrow sm:gap-x-9 sm:mb-photo flex flex-row gap-x-12 justify-end self-center mt-10">
+                    <img src="/src/assets/images/left-arrow.svg" class="sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                    <img src="/src/assets/images/right-arrow.svg" class="sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="sm:mb-photo mb-14">
+                    <h4 class="sm:text-2.25xl sm:leading-loose sm:mb-subh font-bold text-3xl mb-8 leading-more-loose">
+                        Что такое каньонинг?
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                        Каньонинг - это прохождение маршрута вдоль русла реки с преодолением водных и горных
+                        препятствий.
+                        Это значит, что где-то нам придеться карабкаться вдоль скал, местами переходить реку снимая
+                        обувь, а
+                        при желании и вовсе преодолевать реку вплавь, прыгая со скал под водопады!
+                    </p>
+                </div>
+                <div class="sm:flex-col flex flex-row">
+                    <div class="sm:mr-0 sm:mb-photo mr-24">
+                        <img src="/src/assets/images/fern.svg" alt="fern" class="sm:mb-terh h-11 w-11 mb-6">
+                        <h4
+                            class="sm:text-2.25xl sm:leading-loose sm:mb-subh font-bold text-xl mb-8 leading-more-loose">
+                            Взаимодействие с природой
+                        </h4>
+                        <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                            Суть каньоинга в прямом и тактильном взаимодействии с природой: проползать под и над
+                            бревнами,
+                            искать опору для ног и рук проходя большие камни, прощупывать дно и обуздывать страхи для
+                            прыжков в воду.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/src/assets/images/waterfall.svg" alt="waterfall" class="sm:mb-terh h-11 w-11 mb-6">
+                        <h4
+                            class="sm:text-2.25xl sm:leading-loose sm:mb-subh font-bold text-xl mb-8 leading-more-loose">
+                            Варианты выбора
+                        </h4>
+                        <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                            Мы всегда предлагаем уникальные варианты прохождения каньона. Если вы не хотите экстрима, а
+                            желаете просто посмотреть на красивые пейзажи, мы составим маршрут практически или вовсе не
+                            требующий скалолазанья и прыжков.
+                        </p>
+                    </div>
+                </div>
+                <h5
+                    class="sm:hidden text-shadow text-right mt-auto font-['Xtreem_2_Personal_Use'] text-6xl text-primary-green relative top-14 right-12">
+                    Это лучше моря!
+                </h5>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div>
+            <div class="sm:flex-col-reverse sm:gap-y-0 sm:mb-28 flex flex-row mb-48">
+                <div>
+                    <h5
+                        class="sm:mb-decor font-['Xtreem_2_Personal_Use'] text-5.5xl text-primary-green mb-6 text-shadow">
+                        Когда нужны эмоции
+                    </h5>
+                    <h4 class="sm:text-2.25xl sm:leading-loose sm:mb-subh font-bold text-xl mb-4 leading-more-loose">
+                        Четыре каньона: сухой и Мокрый Псахо, Кудепстинский каньон
+                        и Даньков Ерик
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-paragraph leading-extra-loose mb-11">
+                        На маршруте вас ждут белоснежные высокие скалы, бирюзовые горные реки, пороги и природные ванны,
+                        сотни видов субтропической флоры. В походе мы встретим стада лошадей, коров и буйлолов, по
+                        желанию
+                        посетим удивительные пещеры. Крайне насыщенный маршрут!
+                    </p>
+                    <div class="sm:flex-wrap flex flex-row gap-x-16 items-center">
+                        <div class="flex flex-row gap-5">
+                            <img src="/src/assets/images/clock.svg" class="sm:w-9 sm:h-9 w-7 h-7 mt-1" />
+                            <span class="text-base">
+                                <span class="sm:text-xl text-primary-green font-bold">Тайминг</span><br />
+                                6 часов
+                            </span>
+                        </div>
+                        <div class="flex flex-row gap-5">
+                            <img src="/src/assets/images/map.svg" class="sm:w-9 sm:h-9 w-7 h-7 mt-1" />
+                            <span class="text-base">
+                                <span class="sm:text-xl text-primary-green font-bold">Сложность</span><br />
+                                Средне
+                            </span>
+                        </div>
+                        <div class="sm:w-full sm:mt-info">
+                            <button
+                                class="sm:w-full self-center whitespace-nowrap uppercase font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                                <a class="inline-block w-full h-full py-5 px-16" href="../tour/2/">
+                                    Подробности тура
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="sm:flex-row sm:self-start sm:ml-0 sm:mr-0 sm:gap-x-9 sm:mt-arrow sm:mb-photo h-full flex flex-col gap-y-12 justify-center self-center mr-8 ml-16 shrink-0">
+                    <img src="/src/assets/images/up-arrow.svg"
+                        class="gallery_tour2-left sm:-rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                    <img src="/src/assets/images/bottom-arrow.svg"
+                        class="gallery_tour2-right sm:-rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                </div>
+                <div>
+                    <div class="sm:w-full sm:h-68 w-170 h-full bg-center bg-cover rounded-md">
+                        <div class="overflow-hidden w-full h-full rounded-md box-shadow">
+                            <div
+                                class="sm:flex-row gallery gallery_tour2 gallery_vert w-full h-full translate-x-0 translate-y-0 transition-transform flex flex-col flex-nowrap">
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full pvd-1 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full pvd-1-2 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full pvd-1-3 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:flex-col sm:gap-y-0 sm:mb-28 flex flex-row mb-48">
+                <div>
+                    <div class="sm:w-full sm:h-68 w-170 h-full bg-center bg-cover rounded-md">
+                        <div class="overflow-hidden w-full h-full rounded-md box-shadow">
+                            <div
+                                class="sm:flex-row gallery gallery_tour7 gallery_vert w-full h-full translate-x-0 translate-y-0 transition-transform flex flex-col flex-nowrap">
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full tour7-m-1 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full tour7-m-2 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                                <div
+                                    class="sm:w-full sm:h-68 w-170 h-full tour7-m-3 bg-center bg-cover bg-no-repeat shrink-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="sm:flex-row sm:self-start sm:ml-0 sm:mr-0 sm:gap-x-9 sm:mt-arrow sm:mb-photo h-full flex flex-col gap-y-12 justify-center self-center ml-8 mr-16 shrink-0">
+                    <img src="/src/assets/images/up-arrow.svg"
+                        class="gallery_tour7-left sm:-rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                    <img src="/src/assets/images/bottom-arrow.svg"
+                        class="gallery_tour7-right sm:-rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                </div>
+                <div>
+                    <h5
+                        class="sm:mb-decor font-['Xtreem_2_Personal_Use'] text-5.5xl text-primary-green mb-6 text-shadow">
+                        Лучший каньон Сочи!
+                    </h5>
+                    <h4 class="sm:text-2.25xl sm:leading-loose sm:mb-subh font-bold text-xl mb-4 leading-more-loose">
+                        Поход в самый красивый каньон Сочи: Кудепстинский каньон
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-paragraph leading-extra-loose mb-11">
+                        Этот поход оставит неизгладимое впечатление — гарантируем! Кудепсинский каньон — 2-х
+                        километровый
+                        каньон из белого известняка. В принципе, таких каньонов в Сочи десятки. Но этот маршрут
+                        находится на
+                        первом месте в топе нашего списка каньнов и ущелей из-за масштаба и текстур скал. Если вы хотите
+                        увидеть девственную природу Сочи — это для вас </p>
+                    <div class="sm:flex-wrap flex flex-row gap-x-16 items-center">
+                        <div class="flex flex-row gap-5">
+                            <img src="/src/assets/images/clock.svg" class="sm:w-9 sm:h-9 w-7 h-7 mt-1" />
+                            <span class="sm:text-xl text-base">
+                                <span class="text-primary-green font-bold">Тайминг</span><br />
+                                4 часа
+                            </span>
+                        </div>
+                        <div class="flex flex-row gap-5">
+                            <img src="/src/assets/images/map.svg" class="sm:w-9 sm:h-9 w-7 h-7 mt-1" />
+                            <span class="sm:text-xl text-base">
+                                <span class="text-primary-green font-bold">Сложность</span><br />
+                                Средне
+                            </span>
+                        </div>
+                        <div class="sm:w-full sm:mt-info">
+                            <button
+                                class="sm:w-full self-center whitespace-nowrap uppercase font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                                <a class="inline-block w-full h-full py-5 px-16" href="../tour/7/">
+                                    Подробности тура
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-tours-background bg-center">
+        <div class="sm:py-24 container pt-28 pb-32">
+            <h4
+                class="sm:text-subh sm:leading-relaxed sm:mb-heading sm:right-0 relative right-9 font-bold text-3xl mb-18">
+                <span class="sm:hidden">—</span> Организационные детали
+            </h4>
+            <div class="sm:flex-col sm:gap-y-14 flex flex-row gap-x-40 mb-20">
+                <div>
+                    <img class="sm:hidden w-14 h-14 mb-6" src="/src/assets/images/car.svg" />
+                    <h4 class="sm:text-2.25xl sm:mb-subh font-bold text-xl mb-4 leading-more-loose">
+                        Трансфер
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                        Наша команда гидов состоит из коренных сочинцев, которые впитали в себя историю и культуру Юга и
+                        Кавказа. Мы не пересказываем Википедию, а делимся фактами, о которых знают только местные.
+                    </p>
+                </div>
+                <div>
+                    <img class="sm:hidden w-14 h-14 mb-6" src="/src/assets/images/map-2.svg" />
+                    <h4 class="sm:text-2.25xl sm:mb-subh font-bold text-xl mb-4 leading-more-loose">
+                        Прогулка по окресностям
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                        Мы принципиально не проводим групповые походы. чтобы с вами не было посторонних людей. Ваш поход
+                        будет состоять только из вас, ваших друзей и/или семьи.
+                    </p>
+                </div>
+                <div>
+                    <img class="sm:hidden w-14 h-14 mb-6" src="/src/assets/images/binocle.svg" />
+                    <h4 class="sm:text-2.25xl sm:mb-subh font-bold text-xl mb-4 leading-more-loose">
+                        История Сочи
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm leading-extra-loose">
+                        Мы любим свой город и старательно изучаем не только природу, но и историю Сочи, поэтому
+                        расскажем вам интересные исторические факты и ответим на любые вопросы связанные с историей Сочи
+                    </p>
+                </div>
+            </div>
+            <h4 class="sm:text-2xl sm:leading-extra-loose font-bold text-3xl mb-9">
+                — «Если у человека появляется возможность вести необычную
+                жизнь он не имеет права от неё отказываться»
+            </h4>
+            <h5 class="text-right font-['Xtreem_2_Personal_Use'] text-6xl text-primary-green text-shadow">
+                Жак Ив Кусто
+            </h5>
+        </div>
+    </section>
+
+    <section class="sm:py-24 container py-28">
+        <h4 class="sm:text-subh sm:leading-relaxed sm:mb-heading font-bold text-3xl mb-18">
+            Впечатления туристов о наших походах
+        </h4>
+        <div class="sm:grid-cols-1 sm:gap-y-24 sm:mb-18 grid grid-cols-2 gap-x-40 gap-y-18 mb-28">
+            <div class="sm:block flex flex-row">
+                <div class="sm:float-left mr-6 shrink-0">
+                    <img class="sm:mb-0 w-16 h-16 rounded-full mb-6" src="/src/assets/images/user13.png" />
+                </div>
+                <div>
+                    <h4 class="sm:text-2xl sm:mb-photo sm:mt-4 font-bold text-xl mb-3 leading-more-loose">
+                        Анастасия
+                    </h4>
+                    <p class="sm:text-lg-sm sm:block leading-extra-loose">
+                        Даниил абсолютный профессионал своего дела, влюблённый в свою работу гид и это очень
+                        чувствуется! Выбирает тот темп, который подходит именно нам, ведёт по таким тропам, где туристов
+                        наименьшее кол-во и от этого они ещё интереснее)
+                    </p>
+                </div>
+            </div>
+            <div class="sm:block flex flex-row">
+                <div class="sm:float-left mr-6 shrink-0">
+                    <img class="sm:mb-0 w-16 h-16 rounded-full mb-6" src="/src/assets/images/user14.png" />
+                </div>
+                <div>
+                    <h4 class="sm:text-2xl sm:mb-photo sm:mt-4 font-bold text-xl mb-3 leading-more-loose">
+                        Ольга
+                    </h4>
+                    <p class="sm:text-lg-sm sm:block leading-extra-loose">
+                        Отличная экскурсия! Чем именно мне понравилось: это единение с природой, красотища, прошли
+                        несколько водопадов ,сделали снимки. Наш гид Владислав подстраивал темп под нас, показал все
+                        лучшие места
+                    </p>
+                </div>
+            </div>
+            <div class="sm:block flex flex-row">
+                <div class="sm:float-left mr-6 shrink-0">
+                    <img class="sm:mb-0 w-16 h-16 rounded-full mb-6" src="/src/assets/images/user15.png" />
+                </div>
+                <div>
+                    <h4 class="sm:text-2xl sm:mb-photo sm:mt-4 font-bold text-xl mb-3 leading-more-loose">
+                        Тивков
+                    </h4>
+                    <p class="sm:text-lg-sm sm:block leading-extra-loose">
+                        Ого-го скажу я вам! Экскурсия, а точнее большое осеннее приключение в горах для меня знаковое
+                        событие года! Удивительные виды нашей Природы, шикарные фото и проверка выносливости! Ребята
+                        знают своё дело! Рекомендую!!!
+                    </p>
+                </div>
+            </div>
+            <div class="sm:block flex flex-row">
+                <div class="sm:float-left mr-6 shrink-0">
+                    <img class="sm:mb-0 w-16 h-16 rounded-full mb-6" src="/src/assets/images/user16.png" />
+                </div>
+                <div>
+                    <h4 class="sm:text-2xl sm:mb-photo sm:mt-4 font-bold text-xl mb-3 leading-more-loose">
+                        Ирина
+                    </h4>
+                    <p class="sm:text-lg-sm sm:block leading-extra-loose">
+                        Большое спасибо Даниилу который, не смотря на проливной дождь, сделал наш поход максимально
+                        комфортным и интересным. Экскурсия оставила незабываемые впечатления. Спасибо, вернемся и сразу
+                        с вами в горы.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button
+                class="sm:w-full sm:text-xl uppercase font-bold tracking-wider text-sm text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                <a class="inline-block w-full h-full sm:px-0 sm:py-5 py-4 px-24" href="../reviews/">
+                    Посмотреть все +100 отзывов
+                </a>
+            </button>
+        </div>
+    </section>
+
+    <!--<section class="sm:py-24 bg-black py-32">-->
+    <!--    <div class="container">-->
+    <!--        <h4-->
+    <!--                class="sm:text-2.25xl sm:leading-relaxed sm:mb-18 font-bold text-3xl mb-24"-->
+    <!--        >-->
+    <!--            Маршруты из других категорий, которые могут быть интересны-->
+    <!--        </h4>-->
+    <!--        <div-->
+    <!--                class="sm:grid-cols-2 sm:gap-y-18 grid grid-cols-4 gap-x-12"-->
+    <!--        >-->
+    <!--            <div>-->
+    <!--                <div-->
+    <!--                        class="sm:h-62 sm:mb-11 w-full h-112 bg-[#D9D9D9] mb-4 rounded-md"-->
+    <!--                ></div>-->
+    <!--                <h6-->
+    <!--                        class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green"-->
+    <!--                >-->
+    <!--                    Каньоинг-->
+    <!--                </h6>-->
+    <!--                <h4-->
+    <!--                        class="sm:text-base font-bold text-xl mb-3 leading-more-loose"-->
+    <!--                >-->
+    <!--                    Нетуристическая Воронцовская пещера-->
+    <!--                </h4>-->
+    <!--            </div>-->
+    <!--            <div>-->
+    <!--                <div-->
+    <!--                        class="sm:h-62 sm:mb-11 w-full h-112 bg-[#D9D9D9] mb-4 rounded-md"-->
+    <!--                ></div>-->
+    <!--                <h6-->
+    <!--                        class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green"-->
+    <!--                >-->
+    <!--                    Многодневные походы-->
+    <!--                </h6>-->
+    <!--                <h4-->
+    <!--                        class="sm:text-base font-bold text-xl mb-3 leading-more-loose"-->
+    <!--                >-->
+    <!--                    Сухой и Мокрый каньон реки Псахо-->
+    <!--                </h4>-->
+    <!--            </div>-->
+    <!--            <div>-->
+    <!--                <div-->
+    <!--                        class="sm:h-62 sm:mb-11 w-full h-112 bg-[#D9D9D9] mb-4 rounded-md"-->
+    <!--                ></div>-->
+    <!--                <h6-->
+    <!--                        class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green"-->
+    <!--                >-->
+    <!--                    Спелеотур-->
+    <!--                </h6>-->
+    <!--                <h4-->
+    <!--                        class="sm:text-base font-bold text-xl mb-3 leading-more-loose"-->
+    <!--                >-->
+    <!--                    Ажекский экопарк и водопады-->
+    <!--                </h4>-->
+    <!--            </div>-->
+    <!--            <div>-->
+    <!--                <div-->
+    <!--                        class="sm:h-62 sm:mb-11 w-full h-112 bg-[#D9D9D9] mb-4 rounded-md"-->
+    <!--                ></div>-->
+    <!--                <h6-->
+    <!--                        class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green"-->
+    <!--                >-->
+    <!--                    Походы на конях-->
+    <!--                </h6>-->
+    <!--                <h4-->
+    <!--                        class="sm:text-base font-bold text-xl mb-3 leading-more-loose"-->
+    <!--                >-->
+    <!--                    Агурское ущелье и Орлиннве скалы-->
+    <!--                </h4>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
+    <section class="sm:py-24 bg-black py-32">
+        <div class="container">
+            <h4 class="sm:text-subh sm:leading-relaxed sm:mb-heading sm:mb-heading font-bold text-3xl mb-24">
+                Маршруты из других категорий, которые могут быть интересны
+            </h4>
+            <div class="sm:grid-cols-2 sm:gap-y-18 grid grid-cols-4 gap-x-12">
+                <div>
+                    <a href="../tour/4/"
+                        class="sm:h-62 sm:mb-photo block w-full h-112 speleo-2 box-shadow bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-terh text-base font-bold mb-3 text-primary-green">
+                        Однодневные походы
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Бзерпинский карниз
+                    </h4>
+                </div>
+                <div>
+                    <a href="../tour/2/"
+                        class="sm:h-62 sm:mb-photo block w-full h-112 main-5 box-shadow bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-terh text-base font-bold mb-3 text-primary-green">
+                        Каньонинг
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Сухой и Мокрый каньон реки Псахо
+                    </h4>
+                </div>
+                <div>
+                    <a href="../tour/3/"
+                        class="sm:h-62 sm:mb-photo block w-full h-112 main-8 box-shadow bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-terh text-base font-bold mb-3 text-primary-green">
+                        Однодневные походы
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Ажекский экопарк и водопады
+                    </h4>
+                </div>
+                <div>
+                    <a href="../tour/1/"
+                        class="sm:h-62 sm:mb-photo block w-full h-112 main-6 box-shadow bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-terh text-base font-bold mb-3 text-primary-green">
+                        Однодневные походы
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Агурское ущелье и Орлиннве скалы
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="sm:py-14 bg-gray-2-bgc py-20">
+        <div class="container">
+            <div class="sm:flex-col flex flex-row justify-between">
+                <div class="sm:max-w-none flex flex-col max-w-xs">
+                    <a href="/" class="flex flex-row mb-9">
+                        <img src="/src/assets/images/logo.svg" class="sm:w-[2.7rem] w-[2.5rem] h-auto self-end mb-1"
+                            alt="Экскурсии и походы в Сочи. Ecomap" />
+                        <span class="uppercase font-bold text-[0.65rem] ml-4 leading-relaxed">
+                            <span class="text-lg"> Экотрип </span>
+                            <br />
+                            Походы Сочи
+                        </span>
+                    </a>
+                    <p class="sm:mb-10 sm:text-lg-sm sm:leading-extra-loose text-base leading-loose mb-14">
+                        Экотрип - поставщик ярких впечатления на природе
+                        Сочи, Адлера и Красной Поляны!
+                    </p>
+
+                    <p class="sm:mb-14 sm:text-lg text-base leading-loose font-bold">
+                        ИНН: 231711144790
+                    </p>
+                </div>
+                <div class="sm:mb-14">
+                    <h6 class="sm:mb-10 sm:text-xl text-lg text-primary-green font-bold uppercase mb-[3.65rem]">
+                        Подписывайся!
+                    </h6>
+                    <div class="sm:flex-row sm:flex-wrap flex flex-col">
+                        <a href="https://vk.com/ecotripsochi" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/vk.svg" class="sm:h-9 sm:top-1.5 h-6 w-auto relative top-1" />
+                            Вконтакте
+                        </a>
+                        <a href="https://t.me/ecotripsochi" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/tg.svg" class="sm:h-8 h-6 w-auto" />
+                            Телеграм
+                        </a>
+                        <a href="https://dzen.ru/ecotrip" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/dzen.svg" class="sm:h-8 h-6 w-auto" />
+                            Дзен
+                        </a>
+                    </div>
+                </div>
+                <div class="sm:mb-14">
+                    <div class="sm:mb-10 flex flex-row flex-nowrap items-center gap-x-7 mb-[3.65rem]">
+                        <h6 class="sm:text-xl text-lg text-primary-green font-bold uppercase">
+                            Контакты
+                        </h6>
+                        <div class="sm:hidden w-full bg-primary-green h-[1px]"></div>
+                    </div>
+                    <div class="sm:flex-col flex flex-row">
+                        <div>
+                            <div class="flex flex-row">
+                                <img src="/src/assets/images/telephone.svg" alt="Телефон" class="h-5 w-5 mr-6" />
+                                <div>
+                                    <a class="sm:text-xl sm:mb-8 block font-bold text-base mb-4"
+                                        href="tel:+79996550090">
+                                        +7 (999) 655-00-90
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sm:mb-8 mb-8">
+                                <p class="text-sm leading-loose">
+                                    Можно звонить и писать в<br> любые мессенджеры
+                                </p>
+                            </div>
+                            <div class="flex flex-row">
+                                <img src="/src/assets/images/email.svg" alt="Почта" class="h-5 w-5 mr-6" />
+                                <a class="sm:text-xl sm:mb-8 font-bold block text-base mb-6"
+                                    href="mailto:ecotrip@mail.ru">ecotrip@mail.ru</a>
+                            </div>
+                        </div>
+                        <div class="sm:ml-0 sm:max-w-none max-w-[18rem] ml-24">
+                            <p class="sm:text-lg-sm sm:leading-extra-loose text-base leading-loose">
+                                Мы можем сами связаться с вами! Напишите
+                                номер телефона и мы позвоним вам настолько
+                                скоро, насколько сможем!
+                            </p>
+                            <div class="w-full mt-6 relative h-[40px] flex">
+                                <input id="fast-mail"
+                                    class="sm:py-4 sm:text-lg block w-full h-full outline-none bg-gray-2-bgc border text-base px-5 placeholder:text-gray-300 font-normal"
+                                    placeholder="введите номер" type="text" />
+                                <div id="fast-mail-btn"
+                                    class="w-[40px] h-full bg-white flex items-center justify-center cursor-pointer">
+                                    <img src="/src/assets/images/arrow2.svg" alt=">" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="sm:flex hidden flex-col border-t-[1px] border-primary-green pt-14">
+                    <p class="text-lg font-bold">
+                        ИНН: 231711144790
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- <footer>
+Работа с масштабом: <br>
+<input type="number" id="scale" class="text-black" />
+</footer> -->
+    <script src="/modernizr-custom.js" type="module"></script>
+    <script src="/main.js" type="module"></script>
+</body>
+
+</html>

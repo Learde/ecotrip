@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru" class="lg:text-[10px] lg2:text-[8px] sm:text-[11px]">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Экотрип | Тур</title>
+    <link rel="shortcut icon" href="/src/assets/images/logo.svg" type="image/svg" />
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="overflow-x-hidden bg-gray-bgc">
+    <div id="booking"
+        class="hidden w-screen h-screen fixed top-0 left-0 bottom-0 right-0 z-50 bg-[rgba(0,0,0,0.65)] flex items-center">
+        <div class="container relative">
+            <img id="stop-booking" src="/src/assets/images/cross.svg"
+                class="absolute right-12 -top-12 w-9 h-auto cursor-pointer">
+            <h3 class="sm:text-2.25xl sm:leading-loose sm:mb-6 font-bold text-2.5xl mb-8 text-primary-green">
+                Вы бронируете:
+            </h3>
+            <h2 data-title="Король водопадов — Ажекский экопарк" id="book-tour"
+                class="sm:text-4xl font-bold text-4xl tracking-wider leading-tight mb-20">
+                Король водопадов — Ажекский <br />
+                экопарк
+            </h2>
+            <div id="booking-fields" class="flex flex-row gap-x-14">
+                <div id="booking-calendar">
+                    <label
+                        class="sm:mb-subh font-bold sm:text-2.25xl text-xl mb-8 inline-block sm:leading-loose leading-more-loose">
+                        Выберете дату похода
+                    </label>
+                    <div id="calendar"></div>
+                </div>
+                <div>
+                    <label
+                        class="sm:mb-subh font-bold sm:text-2.25xl text-xl mb-8 inline-block sm:leading-loose leading-more-loose">
+                        Участников
+                    </label>
+                    <div class="rounded-md bg-white w-36 justify-between items-center flex flex-row">
+                        <img src="/src/assets/images/next.svg"
+                            class="w-4 h-auto box-content rotate-180 py-5 pr-6 pl-1 cursor-pointer" id="people-dec">
+                        <div class="text-black text-xl font-bold" id="people">1</div>
+                        <img src="/src/assets/images/next.svg"
+                            class="w-4 py-5 h-auto box-content pr-6 pl-1 cursor-pointer" id="people-inc">
+                    </div>
+                </div>
+                <div>
+                    <label
+                        class="sm:mb-subh font-bold sm:text-2.25xl text-xl mb-8 inline-block sm:leading-loose leading-more-loose">
+                        Телефон для связи
+                    </label>
+                    <input type="tel" id="book-phone"
+                        class="w-full h-[48.25px] bg-white rounded-md outline-none text-black px-6 text-lg"
+                        placeholder="Введите ваш номер">
+                    <p id="book-error" class="text-red-600 font-bold hidden leading-loose">Некорректный номер
+                        телефона</p>
+                    <div class="flex flex-col mt-6">
+                        <label class="leading-extra-loose font-bold">
+                            <input type="radio" name="contact-type" id="contact-type1" checked>
+                            Напишите в WhatsApp
+                        </label>
+                        <label class="leading-extra-loose font-bold">
+                            <input type="radio" name="contact-type" id="contact-type2">
+                            Напишите в Телеграм
+                        </label>
+                        <label class="leading-extra-loose font-bold">
+                            <input type="radio" name="contact-type" id="contact-type3">
+                            Позвоните
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <label
+                        class="sm:mb-subh font-bold sm:text-2.25xl text-xl mb-8 inline-block sm:leading-loose leading-more-loose">
+                        Откуда вас забрать
+                    </label>
+                    <input type="text" id="book-address"
+                        class="w-full h-[48.25px] bg-white rounded-md outline-none text-black px-6 text-lg"
+                        placeholder="Напишите адрес">
+                </div>
+                <div style="min-width: 230px; max-width: 230px">
+                    <label
+                        class="sm:mb-subh font-bold sm:text-2.25xl text-xl mb-8 inline-block text-primary-green sm:leading-loose leading-more-loose">
+                        Забронировать поход!
+                    </label>
+                    <button id="book-btn"
+                        class="w-full h-[48.25px] font-bold uppercase bg-primary-green text-lg transition-all shadow-none hover:shadow-btn-light rounded-md text-black">
+                        Хочу в поход!
+                    </button>
+                    <div id="book-ok" class="hidden">
+                        <div class="mt-6">
+                            <p class="text-base leading-more-loose">Супер, мы с вами свяжемся так быстро, насколько
+                                сможем!
+                            </p>
+                        </div>
+                        <div class="mt-5">
+                            <p class="text-base font-bold leading-more-loose">
+                                А пока что можете поближе познакомиться с нашей природой — <a href="/blog/"
+                                    class="text-primary-green">кликайте :)</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="bg-center tour3-bg bg-center bg-cover pt-18 pb-140">
+        <div class="container relative mx-auto">
+            <nav class="flex flex-row items-start mb-48">
+                <a href="../../" class="flex flex-row">
+                    <img src="/src/assets/images/logo.svg" class="sm:w-[2.7rem] w-[2.5rem] h-auto self-end mb-1"
+                        alt="Экскурсии и походы в Сочи. Ecomap" />
+                    <span class="uppercase font-bold text-[0.65rem] ml-4 leading-relaxed">
+                        <span class="text-lg"> Экотрип </span>
+                        <br />
+                        Походы Сочи
+                    </span>
+                </a>
+                <a href="../../pvd/" class="sm:hidden ml-auto uppercase font-bold text-lg pt-1">
+                    Походы
+                </a>
+                <a href="../../canyoning/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Каньонинг
+                </a>
+                <a href="../../speleo/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Спелеотуризм
+                </a>
+                <a href="../../blog/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Блог
+                </a>
+                <a href="../../faq/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Вопросы
+                </a>
+
+                <input id="toggle" type="checkbox" class="hidden" />
+
+                <label for="toggle" class="sm:block hidden hamburger">
+                    <div class="top-bun"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bun"></div>
+                </label>
+
+                <div class="sm:flex nav hidden flex-col gap-y-4 pr-16 justify-center text-right">
+                    <a href="../../" class="uppercase font-bold text-2.25xl leading-7 py-4 ">
+                        Главная
+                    </a>
+                    <a href="../../pvd/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Походы
+                    </a>
+                    <a href="../../canyoning/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Каньонинг
+                    </a>
+                    <a href="../../speleo/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Спелеотуризм
+                    </a>
+                    <a href="../../blog/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Блог
+                    </a>
+                    <a href="../../faq/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Вопросы
+                    </a>
+                    <div class="text-2.25xl leading-7 font-bold absolute bottom-[2rem] right-[4rem]">
+                        <a class="mb-9 block" href="tel:879996550090">+7 999 655 00 90</a>
+                        <div class="flex flex-row justify-end">
+                            <a class="block mr-8" href="https://vk.com/ecotripsochi" target="_blank">
+                                <img class="w-12 h-12 relative top-2" src="/src/assets/images/vk.svg"
+                                    alt="Ecotrip Вконтакте">
+                            </a>
+                            <a href="https://t.me/ecotripsochi" target="_blank">
+                                <img class="w-10 h-10" src="/src/assets/images/tg.svg" alt="Ecotrip Телеграм">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <p class="extra:text-lg sm:text-xl sm:mb-14 font-bold text-xl mb-8 tracking-[1.2px]">
+                Однодневный поход / треккинг
+            </p>
+            <h1 class="extra:text-3.5xl sm:text-4xl font-bold text-5xl tracking-wider leading-tight mb-20">
+                Король водопадов — Ажекский<br class="sm:hidden" />
+                экопарк
+            </h1>
+
+            <button id="start-booking"
+                class="uppercase py-5.5 px-15 tracking-wider font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                Забронировать
+            </button>
+
+            <div
+                class="sm:hidden flex flex-row items-center uppercase font-bold text-base absolute right-12 top-1/2 rotate-90 origin-top-right translate-y-86">
+                Подпишись
+                <div class="w-48 h-[1px] bg-white mx-5"></div>
+                <a href="https://t.me/ecotripsochi" target="_blank">
+                    <img src="/src/assets/images/tg.svg" class="w-4 h-auto mr-5 -rotate-90" />
+                </a>
+                <a href="https://vk.com/ecotripsochi" target="_blank">
+                    <img src="/src/assets/images/vk.svg" class="w-4 h-auto -rotate-90" />
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="container -mb-7">
+        <div class="sm:-mb-20 relative bottom-44 flex flex-row items-start gap-x-24">
+            <div class="w-full">
+                <article class="mb-24">
+                    <h3
+                        class="sm:text-2.25xl sm:leading-loose sm:mb-6 sm:right-0 relative right-9 font-bold text-3xl mb-8">
+                        <span class="sm:hidden">—</span> Что вас ожидает
+                    </h3>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-19 text-base leading-extra-loose mb-10">
+                        Поход на день в чарующее лесное царство с лианами, папоротниками, гигантскими деревьями и
+                        отвесными
+                        скалами! Вы оцените красоту четырех водопадов, выпьете горной воды из родника и насладитесь
+                        прохладой и тишиной. А мы расскажем о жизни в Краснодарском крае: местных обычаях, традициях,
+                        природе и нравах!
+                    </p>
+                    <h4 class="sm:text-2.25xl sm:leading-loose sm:mb-6 font-bold text-lg mb-5">
+                        Дивные лесные водопады
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-19 text-base leading-extra-loose mb-10">
+                        Мы по праву считаем Ажекские водопады самыми живописными в Сочи: они не самые высокие, но самые
+                        атмосферные. Река, образующая водопады, всегда кристально чистая и с бирюзовым оттенком.
+                        Водопады
+                        окружены темными рельефными скалами, на которых обильно растет мох и лианы. Искупаться здесь –
+                        сплошное удовольствие!
+                    </p>
+                    <h4 class="sm:text-2.25xl sm:leading-loose sm:mb-6 font-bold text-lg mb-5">
+                        Сухой каньон Псахо
+                    </h4>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-19 text-base leading-extra-loose mb-10">
+                        Прелесть нашего маршрута не только в самих водопадах, но и в потрясающе живописном пути к ним.
+                        Словно сказочные создания, свисают с отвесных скал причудливые вьющиеся растения. А на отдельных
+                        участках вам покажется, что вы оказались в фантастическом лесу времен Юрского периода! Важно,
+                        что
+                        даже в самый знойный день высокие деревья защищают водопады от солнечного света и здесь всегда
+                        царит
+                        прохлада.
+                    </p>
+                    <p class="sm:leading-extra2-loose sm:text-lg-sm sm:mb-19 text-base leading-extra-loose mb-10">
+                        Отдельного внимания заслуживают деревянные мостики вдоль тропы, которые идеально вписыаюстя в
+                        ландшафт субтропического леса.
+                    </p>
+                </article>
+                <article class="overflow-hidden">
+                    <div
+                        class="gallery2 gallery2_tour1 sm:mb-0 transition-transform grid grid-flow-col auto-cols-[calc(33%-1rem)] sm:auto-cols-[calc(50%-1rem)] grid-rows-2 sm:grid-rows-3 gap-6">
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-1 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-2 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-3 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-4 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-5 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-6 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-7 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-8 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-9 bg-center bg-cover rounded-md">
+                        </div>
+                        <div class="sm:h-70 w-full h-106 box-shadow tour3-10 bg-center bg-cover rounded-md">
+                        </div>
+                    </div>
+                </article>
+                <div class="flex-row self-start ml-0 mr-0 gap-x-9 mt-4 mb-18 flex">
+                    <img src="/src/assets/images/up-arrow.svg"
+                        class="gallery2_tour1-left -rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                    <img src="/src/assets/images/bottom-arrow.svg"
+                        class="gallery2_tour1-right -rotate-90 sm:w-9 w-6 h-auto hover:cursor-pointer" />
+                </div>
+                <article class="mb-24">
+                    <h3 class="sm:text-2.25xl sm:leading-loose sm:mb-6 font-bold text-3xl mb-6">
+                        Организационные детали
+                    </h3>
+                    <ul class="list-disc ml-3.5">
+                        <li class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+
+                            Трансфер из вашего отеля или квартиры (от Центра Сочи до Сириуса) до места старта и обратно
+                            включён в стоимость
+                        </li>
+                        <li class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+                            Входные билеты в Нац. Парк оплачиваются дополнительно: — 200 рублей / чел.
+
+                        </li>
+                        <li class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+                            Нам предстоит пройти 15+ километров пешком по несложной горной местности (набор высоты 150
+                            метров), поэтому обязательно надевайте удобную обувь (кеды/кроссовки) и возьмите минимум 1
+                            литр
+                            воды на человека. Питание по желанию.
+
+                        </li>
+                    </ul>
+                    <div class="sm:block hidden w-full shrink-0 bg-gray-3-bgc py-16 px-14 mt-14">
+                        <div class="flex flex-row justify-between items-center mb-4">
+                            <span class="font-bold text-2xl text-primary-green">3200 руб.</span>
+                            <span class="reviews-count text-base text-primary-green">63 отзыва</span>
+                        </div>
+                        <p class="text-base leading-extra-loose mb-8">
+                            Стоимость с человека<br />в индивидуальном походе*
+                        </p>
+                        <div class="text-lg mb-5">
+                            <span class="font-bold text-primary-green">Тайминг</span>
+                            — 6 часов
+                        </div>
+                        <div class="text-lg mb-5">
+                            <span class="font-bold text-primary-green">Сложность</span>
+                            — 4 / 10 (средне)
+                        </div>
+                        <div class="text-lg mb-14">
+                            <span class="font-bold text-primary-green">Трансфер</span>
+                            — включен в стоимость
+                        </div>
+                        <button id="start-booking"
+                            class="w-full uppercase py-5.5 px-15 tracking-wider font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                            Забронировать
+                        </button>
+                    </div>
+                </article>
+                <article>
+                    <h3 class="sm:text-2.25xl sm:leading-loose sm:mb-14 font-bold text-3xl mb-12">
+                        <span class="text-primary-green">Настоящие</span>
+                        отзывы туристов :)
+                    </h3>
+                    <div class="mb-16">
+                        <div class="flex flex-row mb-9">
+                            <div
+                                class="w-19 h-19 bg-[url('/src/assets/images/user0.png')] bg-center bg-cover rounded-full mr-6">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="sm:text-2xl font-bold text-lg mb-2">
+                                    Маргарита
+                                </p>
+                                <p class="sm:text-2xl text-lg">
+                                    16 октября 2022
+                                </p>
+                            </div>
+                        </div>
+                        <p class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+                            Отличное путешествие к красотам кавказского леса, Влад прекрасный гид, очень позитивный и
+                            приятный молодой человек. Поход рекомендуем людям всё -таки с физической подготовкой - идти
+                            приходится по горным дорожкам) Но зато море впечатлений!
+                        </p>
+                    </div>
+                    <div class="mb-16">
+                        <div class="flex flex-row mb-9">
+                            <div
+                                class="w-19 h-19 bg-[url('/src/assets/images/user0.png')] bg-center bg-cover rounded-full mr-6">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="sm:text-2xl font-bold text-lg mb-2">
+                                    Анастасия
+                                </p>
+                                <p class="sm:text-2xl text-lg">
+                                    22 августа 2020
+                                </p>
+                            </div>
+                        </div>
+                        <p class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+                            Даниил лучший гид в мире! Самый душевный и интересный поход был именно с ним. Тут вам не
+                            будет "товарищи, через 15 минут встречаемся у автобуса". Онли приятные беседы, интересные
+                            рассказы о Сочи, страховки для пугающихся высоты. По шкале 10 моя оценка 20 из 10.
+                            Превосходит все ожидания!
+                        </p>
+                    </div>
+                    <div class="mb-16">
+                        <div class="flex flex-row mb-9">
+                            <div
+                                class="w-19 h-19 bg-[url('/src/assets/images/user0.png')] bg-center bg-cover rounded-full mr-6">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="sm:text-2xl font-bold text-lg mb-2">
+                                    Татьяна
+                                </p>
+                                <p class="sm:text-2xl text-lg">
+                                    16 июля 2020
+                                </p>
+                            </div>
+                        </div>
+                        <p class="sm:leading-extra2-loose sm:text-lg-sm text-base leading-extra-loose">
+                            Незабываемая прогулка в самое сердце природы! Такой поход не только внесёт разнообразие в
+                            ваш отдых, он оставит массу впечатлений. Если вы любите природу и уникальные места, любите
+                            активный отдых-эта экскурсия для вас. Ни одна турфирма не организовывает подобные маршруты.
+                            Даниил, спасибо!
+                        </p>
+                    </div>
+
+                    <a class="sm:text-2xl uppercase text-lg font-bold text-primary-green" href="../reviews/">Показать
+                        все отзывы</a>
+                </article>
+            </div>
+            <div class="sm:hidden w-112 shrink-0 bg-gray-3-bgc py-16 px-14 sticky top-5">
+                <div class="flex flex-row justify-between items-center mb-4">
+                    <span class="font-bold text-2xl text-primary-green">3200 руб.</span>
+                    <span class="reviews-count text-base text-primary-green">63 отзыва</span>
+                </div>
+                <p class="text-base leading-extra-loose mb-8">
+                    Стоимость с человека<br />в индивидуальном походе*
+                </p>
+                <div class="text-lg mb-5">
+                    <span class="font-bold text-primary-green">Тайминг</span>
+                    — 6 часов
+                </div>
+                <div class="text-lg mb-5">
+                    <span class="font-bold text-primary-green">Сложность</span>
+                    — 4 / 10 (средне)
+                </div>
+                <div class="text-lg mb-14">
+                    <span class="font-bold text-primary-green">Трансфер</span>
+                    — включен в стоимость
+                </div>
+                <button id="start-booking"
+                    class="w-full uppercase py-5.5 px-15 tracking-wider font-bold text-lg text-primary-green border border-primary-green transition-all shadow-none hover:shadow-btn-light">
+                    Забронировать
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="sm:py-24 bg-black py-32">
+        <div class="container">
+            <h4 class="sm:text-3xl sm:leading-relaxed sm:mb-18 font-bold text-3xl mb-24">
+                Маршруты, которые вам могут быть интересны
+            </h4>
+            <div class="sm:grid-cols-2 sm:gap-y-18 grid grid-cols-4 gap-x-12">
+                <div>
+                    <a href="../8/"
+                        class="sm:h-62 sm:mb-11 block w-full h-112 box-shadow tour-1 bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green">
+                        Однодневный поход
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Природа налегке: каньон Чёртовы ворота и Большое кольцо в Тисо-Самшитовой роще
+                    </h4>
+                </div>
+                <div>
+                    <a href="../3/"
+                        class="sm:h-62 sm:mb-11 block w-full h-112 box-shadow tour-6 bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green">
+                        Однодневный поход
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Два в одном: Агурское ущелье и Орлиные скалы
+                    </h4>
+                </div>
+                <div>
+                    <a href="../2/"
+                        class="sm:h-62 sm:mb-11 block w-full h-112 box-shadow tour-2 bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green">
+                        Однодневный поход / каньонинг
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Четыре каньона: Сухой и Мокрый Псахо, Кудепстинский каньон и Даньков Ерик
+                    </h4>
+                </div>
+                <div>
+                    <a href="../6/"
+                        class="sm:h-62 sm:mb-11 block w-full h-112 box-shadow tour-4 bg-center bg-cover mb-4 rounded-md"></a>
+                    <h6 class="sm:text-lg sm:mb-4 text-base font-bold mb-3 text-primary-green">
+                        Однодневный поход
+                    </h6>
+                    <h4 class="sm:text-lg-sm font-bold text-xl mb-3 leading-more-loose">
+                        Дзыхринское ущелье: каньон, Корабельные скалы, водохранилище и карьер
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="sm:py-14 bg-gray-2-bgc py-20">
+        <div class="container">
+            <div class="sm:flex-col flex flex-row justify-between">
+                <div class="sm:max-w-none flex flex-col max-w-xs">
+                    <a href="/" class="flex flex-row mb-9">
+                        <img src="/src/assets/images/logo.svg" class="sm:w-[2.7rem] w-[2.5rem] h-auto self-end mb-1"
+                            alt="Экскурсии и походы в Сочи. Ecomap" />
+                        <span class="uppercase font-bold text-[0.65rem] ml-4 leading-relaxed">
+                            <span class="text-lg"> Экотрип </span>
+                            <br />
+                            Походы Сочи
+                        </span>
+                    </a>
+                    <p class="sm:mb-10 sm:text-lg-sm sm:leading-extra-loose text-base leading-loose mb-14">
+                        Экотрип - поставщик ярких впечатления на природе
+                        Сочи, Адлера и Красной Поляны!
+                    </p>
+
+                    <p class="sm:mb-14 sm:text-lg text-base leading-loose font-bold">
+                        ИНН: 231711144790
+                    </p>
+                </div>
+                <div class="sm:mb-14">
+                    <h6 class="sm:mb-10 sm:text-xl text-lg text-primary-green font-bold uppercase mb-[3.65rem]">
+                        Подписывайся!
+                    </h6>
+                    <div class="sm:flex-row sm:flex-wrap flex flex-col">
+                        <a href="https://vk.com/ecotripsochi" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/vk.svg" class="sm:h-9 sm:top-1.5 h-6 w-auto relative top-1" />
+                            Вконтакте
+                        </a>
+                        <a href="https://t.me/ecotripsochi" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/tg.svg" class="sm:h-8 h-6 w-auto" />
+                            Телеграм
+                        </a>
+                        <a href="https://dzen.ru/ecotrip" target="_blank"
+                            class="sm:w-[50%] sm:text-lg flex flex-row gap-x-7 text-base items-center mb-10">
+                            <img src="/src/assets/images/dzen.svg" class="sm:h-8 h-6 w-auto" />
+                            Дзен
+                        </a>
+                    </div>
+                </div>
+                <div class="sm:mb-14">
+                    <div class="sm:mb-10 flex flex-row flex-nowrap items-center gap-x-7 mb-[3.65rem]">
+                        <h6 class="sm:text-xl text-lg text-primary-green font-bold uppercase">
+                            Контакты
+                        </h6>
+                        <div class="sm:hidden w-full bg-primary-green h-[1px]"></div>
+                    </div>
+                    <div class="sm:flex-col flex flex-row">
+                        <div>
+                            <div class="flex flex-row">
+                                <img src="/src/assets/images/telephone.svg" alt="Телефон" class="h-5 w-5 mr-6" />
+                                <div>
+                                    <a class="sm:text-xl sm:mb-8 block font-bold text-base mb-4"
+                                        href="tel:+79996550090">
+                                        +7 (999) 655-00-90
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sm:mb-8 mb-8">
+                                <p class="text-sm leading-loose">
+                                    Можно звонить и писать в<br> любые мессенджеры
+                                </p>
+                            </div>
+                            <div class="flex flex-row">
+                                <img src="/src/assets/images/email.svg" alt="Почта" class="h-5 w-5 mr-6" />
+                                <a class="sm:text-xl sm:mb-8 font-bold block text-base mb-6"
+                                    href="mailto:ecotrip@mail.ru">ecotrip@mail.ru</a>
+                            </div>
+                        </div>
+                        <div class="sm:ml-0 sm:max-w-none max-w-[18rem] ml-24">
+                            <p class="sm:text-lg-sm sm:leading-extra-loose text-base leading-loose">
+                                Мы можем сами связаться с вами! Напишите
+                                номер телефона и мы позвоним вам настолько
+                                скоро, насколько сможем!
+                            </p>
+                            <div class="w-full mt-6 relative h-[40px] flex">
+                                <input id="fast-mail"
+                                    class="sm:py-4 sm:text-lg block w-full h-full outline-none bg-gray-2-bgc border text-base px-5 placeholder:text-gray-300 font-normal"
+                                    placeholder="введите номер" type="text" />
+                                <div id="fast-mail-btn"
+                                    class="w-[40px] h-full bg-white flex items-center justify-center cursor-pointer">
+                                    <img src="/src/assets/images/arrow2.svg" alt=">" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="sm:flex hidden flex-col border-t-[1px] border-primary-green pt-14">
+                    <p class="text-lg font-bold">
+                        ИНН: 231711144790
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- <footer>
+Работа с масштабом: <br>
+<input type="number" id="scale" class="text-black" />
+</footer> -->
+    <script src="/modernizr-custom.js" type="module"></script>
+    <script src="/main.js" type="module"></script>
+    <script src="/tours.js" type="module"></script>
+</body>
+
+</html>
