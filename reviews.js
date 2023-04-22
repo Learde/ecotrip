@@ -58,6 +58,7 @@ const renderReviews = (reviews) => {
         const date = document.createElement("p");
         date.classList.add("sm:text-2xl");
         date.classList.add("text-lg");
+        date.append(review.date);
         nameBlock.append(date);
 
         header.append(nameBlock);

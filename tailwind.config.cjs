@@ -43,7 +43,7 @@ module.exports = {
         'canyoning-background': "linear-gradient(180deg, rgba(25, 25, 25, 0.25) 0%, #191919 100%), url('/src/assets/images/pvd-asset-1.png')",
         'respect-background': "linear-gradient(180deg, #191919 0%, rgba(25, 25, 25, 0.5) 100%), url('/src/assets/images/respect.png')",
         'reviews-background': "linear-gradient(180deg, rgba(25, 25, 25, 0.39) 0%, rgba(25, 25, 25, 0.39) 100%), url('/src/assets/images/reviews.png')",
-        'tours-background': "linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%), url('/src/assets/images/header.png')",
+        'tours-background': "linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%), url('/src/assets/images/main/header.png')",
         'tour-1-background': "linear-gradient(180deg, rgba(25, 25, 25, 0.2) 0%, rgba(25, 25, 25, 1) 100%), url('/src/assets/images/tour-1.png')",
         'tour-2-background': "linear-gradient(180deg, rgba(25, 25, 25, 0.2) 0%, rgba(25, 25, 25, 1) 100%), url('/src/assets/images/tour-2.png')",
         'tour-3-background': "linear-gradient(180deg, rgba(25, 25, 25, 0.2) 0%, rgba(25, 25, 25, 1) 100%), url('/src/assets/images/tour-3.png')",

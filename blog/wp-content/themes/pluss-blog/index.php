@@ -37,8 +37,8 @@ get_header();
                 <a href="/blog/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
                     Блог
                 </a>
-                <a href="/faq/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
-                    Вопросы
+                <a href="/reviews/" class="sm:hidden ml-14 uppercase font-bold text-lg pt-1">
+                    Отзывы
                 </a>
 
                 <input id="toggle" type="checkbox" class="hidden" />
@@ -65,18 +65,21 @@ get_header();
                     <a href="/blog/" class="uppercase font-bold text-2.25xl leading-7 py-4">
                         Блог
                     </a>
-                    <a href="/faq/" class="uppercase font-bold text-2.25xl leading-7 py-4">
-                        Вопросы
+                    <a href="/reviews/" class="uppercase font-bold text-2.25xl leading-7 py-4">
+                        Отзывы
                     </a>
                     <div class="text-2.25xl leading-7 font-bold absolute bottom-[2rem] right-[4rem]">
                         <a class="mb-9 block" href="tel:879996550090">+7 999 655 00 90</a>
                         <div class="flex flex-row justify-end">
                             <a class="block mr-8" href="https://vk.com/ecotripsochi" target="_blank">
                                 <img class="w-12 h-12 relative top-2" src="/blog/assets/images/vk.svg"
-                                    alt="Ecotrip Вконтакте">
+                                     alt="Ecotrip Вконтакте">
                             </a>
-                            <a href="https://t.me/ecotripsochi" target="_blank">
+                            <a class="block mr-8" href="https://t.me/ecotripsochi" target="_blank">
                                 <img class="w-10 h-10" src="/blog/assets/images/tg.svg" alt="Ecotrip Телеграм">
+                            </a>
+                            <a href="https://dzen.ru/ecotrip" target="_blank">
+                                <img src="/blog/assets/images/dzen.svg" class="h-11 w-11" alt="Ecotrip Дзен"/>
                             </a>
                         </div>
                     </div>
